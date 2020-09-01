@@ -8,15 +8,15 @@
               >© 2020 evilfilm<br />
               Create by
               <a
-                href="https://www.youtube.com/watch?v=3Blt8Dzezaw"
+                href="https://www.youtube.com/"
                 target="_blank"
                 >Evil Coder</a
               >
             </span>
 
             <nav class="footer__nav">
-              <nuxt-link to="/">About Us</nuxt-link>
-              <nuxt-link to="/">Contacts</nuxt-link>
+              <nuxt-link to="/contacts">About Us</nuxt-link>
+              <nuxt-link to="/contacts">Contacts</nuxt-link>
               <nuxt-link to="/">Privacy Policy</nuxt-link>
             </nav>
 

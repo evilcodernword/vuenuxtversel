@@ -41,26 +41,26 @@
               <nuxt-link
                 class="dropdown-item"
                 to="/profile"
-                v-on:click.native="toggleProfile"
+                v-on:click.native="toggleProfile();hideNavbar();"
                 >Profile</nuxt-link
               >
               <nuxt-link
                 to="/"
                 class="dropdown-item"
-                v-on:click.native="toggleProfile"
+                v-on:click.native="toggleProfile();hideNavbar();"
               >
                 Notifications <span class="badge badge-light">400</span>
               </nuxt-link>
               <nuxt-link
                 class="dropdown-item"
                 to="/profile/followlist"
-                v-on:click.native="toggleProfile"
+                v-on:click.native="toggleProfile();hideNavbar();"
                 >Follow list</nuxt-link
               >
               <nuxt-link
                 class="dropdown-item"
                 to="/profile/setting"
-                v-on:click.native="toggleProfile"
+                v-on:click.native="toggleProfile();hideNavbar();"
                 >Setting</nuxt-link
               >
               <div class="dropdown-divider"></div>
@@ -70,12 +70,12 @@
             </div>
           </li>
           <li class="nav-item active">
-            <nuxt-link class="nav-link text-light" to="/"
+            <nuxt-link class="nav-link text-light" to="/" v-on:click.native="hideNavbar"
               >Home <span class="sr-only">(current)</span></nuxt-link
             >
           </li>
           <li class="nav-item">
-            <nuxt-link class="nav-link text-light" to="/people"
+            <nuxt-link class="nav-link text-light" to="/people" v-on:click.native="hideNavbar"
               >People</nuxt-link
             >
           </li>
@@ -102,6 +102,7 @@
               type="button"
               to="/signup"
               class="nav-link btn signup_header"
+              v-on:click.native="hideNavbar"
               >SIGN UP</nuxt-link
             >
           </li>

@@ -1500,35 +1500,194 @@ body {
 .active-page {
   background: #fd6060;
 }
-
 /* review-send */
 #review-send {
   width: 100%;
   color: white;
   background-color: #1a191f;
 }
-
 /* Arrows */
 .slick-prev,
 .slick-next {
   z-index: 3;
   cursor: pointer;
-  border: none;
-  outline: none;
+  border: none !important;
+  outline: none !important;
 }
 .slick-prev:hover,
 .slick-prev:focus,
 .slick-next:hover,
 .slick-next:focus {
   color: transparent;
-  outline: none;
+  outline: none !important;
   background: transparent;
 }
-
 .slick-prev {
   left: 10px !important;
 }
-
 .slick-next {
   right: 10px !important;
 }
+.story div,
+.story div:focus,
+.story div:hover {
+  outline: none !important;
+  cursor: pointer;
+}
+/* Contact */
+.containeer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.left-side {
+  width: 400px;
+  height: 40em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-side .content {
+  width: 90%;
+  height: 25em;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: "Baloo Tamma 2", cursive;
+}
+.left-side .content .head-txt-box {
+  padding: 10px;
+  margin: 20px 0;
+}
+.left-side .content .head-txt {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 40px;
+}
+.left-side .content .left-side-txt {
+  font-size: 17px;
+}
+.left-side .content .phone {
+  display: flex;
+  padding: 20px;
+  margin: 10px 0;
+}
+.left-side .content .phone .phone-txt {
+  margin-left: 10px;
+}
+.left-side .content .email {
+  display: flex;
+  padding: 10px;
+  margin: 20px 0;
+}
+.left-side .content .email .email-txt {
+  margin-left: 10px;
+}
+.right-side {
+  width: 400px;
+  height: 40em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-side form {
+  width: 80%;
+  height: 25em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.right-side form .username {
+  border: 1px solid #fc143e;
+  width: 100%;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0 5px #fc143e;
+  margin-bottom: 2em;
+}
+.right-side form .username i {
+  color: #fff;
+}
+.right-side form .username input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 90%;
+  height: 3em;
+  color: #fff;
+}
+.right-side form .username input::placeholder {
+  color: #d9dbeb;
+}
+.right-side form .email-box {
+  border: 1px solid #fc143e;
+  width: 100%;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0 5px #fc143e;
+  margin-bottom: 2em;
+}
+.right-side form .email-box i {
+  color: #fff;
+}
+.right-side form .email-box input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 90%;
+  height: 3em;
+  color: #fff;
+}
+.right-side form .email-box input::placeholder {
+  color: #d9dbeb;
+}
+.right-side form .message-box {
+  border: 1px solid #fc143e;
+  width: 100%;
+  height: 8em;
+  padding: 2px;
+  margin-bottom: 2em;
+  box-shadow: 0 0 5px #fc143e;
+}
+.right-side form .message-box textarea {
+  background-color: transparent;
+  color: #fff;
+  width: 100%;
+  height: 7.5em;
+  resize: none;
+  outline: none;
+  border: none;
+  font-size: 16px;
+}
+.right-side form .message-box textarea::placeholder {
+  color: #d9dbeb;
+}
+.right-side form .submit-box {
+  width: 100%;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+.right-side form .submit-box input[type="submit"] {
+  width: 100%;
+  height: 2em;
+  outline: none;
+  border: 1px solid #fc143e;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: transparent;
+  color: #fff;
+}
+.right-side form .submit-box input[type="submit"]:hover {
+  box-shadow: 0 0 10px #fc143e;
+}
+/*# sourceMappingURL=contact.css.map */
