@@ -415,34 +415,47 @@ export default {
       },
       settings: {
         slidesToShow: 5,
-        slidesToScroll: 5,
+        slidesToScroll:5,
+        arrows:true,  
         infinite: false,
         centerMode: false,
         responsive: [
           {
-            breakpoint: 1024,
+            breakpoint: 1200,
             settings: {
               slidesToShow: 4,
-              slidesToScroll: 4
+              slidesToScroll:4,
+              arrows: false,
+              centerMode: false,
             }
           },
           {
-            breakpoint: 600,
+            breakpoint: 992,
             settings: {
+              slidesToShow: 5,
+              slidesToScroll:5,
               arrows: false,
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              initialSlide: 3
+              centerMode: false,
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll:4,
+              arrows: false,
+              centerMode: false,
             }
           },
           {
             breakpoint: 480,
             settings: {
+              slidesToShow: 3,
+              slidesToScroll:3,
               arrows: false,
-              slidesToShow: 2,
-              slidesToScroll: 2
+              centerMode: false,
             }
-          }
+          },
         ]
       },
       stories: [
