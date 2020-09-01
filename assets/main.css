@@ -943,11 +943,11 @@ html {
 .profile_List svg {
   width: 28px;
   height: 28px;
-  margin-right:10px;
-  margin-left:10px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 .profile_List a {
-  font-size:20px;
+  font-size: 20px;
   text-align: left;
   color: whitesmoke;
   outline: none;
@@ -1501,15 +1501,34 @@ body {
   background: #fd6060;
 }
 
-
-
-
-
-
-
 /* review-send */
-#review-send{
+#review-send {
   width: 100%;
   color: white;
   background-color: #1a191f;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  z-index: 3;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  color: transparent;
+  outline: none;
+  background: transparent;
+}
+
+.slick-prev {
+  left: 10px !important;
+}
+
+.slick-next {
+  right: 10px !important;
 }

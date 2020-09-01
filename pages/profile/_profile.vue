@@ -17,7 +17,7 @@
         >
           <icon name="setting" />setting
         </nuxt-link>
-        <a href="javascript:0"> <icon name="sign_out" />Sign out </a>
+        <a href="javascript:0" @click="alert"> <icon name="sign_out" />Sign out </a>
       </div>
       <div class="profileDiv col-12 col-xl-8 col-md-8 " v-if="!id">
         <h1 style="color: #FD6060;">Profile</h1>
@@ -58,7 +58,7 @@
         >
           Follow List
         </center>
-        <div class="col-6 col-sm-6 col-md-6 col-xl-4 mb-4">
+        <div class="col-6 col-sm-6 col-md-6 col-xl-4 mb-4" v-for="(n, indx) in 23" :key="indx">
           <div class="card card-list">
             <div class="card__cover">
               <img
@@ -109,6 +109,11 @@ export default {
       title: this.title_profile + " - filmsite.com",
       meta: [{ name: "description", content: this.description_profile }]
     };
+  },
+  methods:{
+    alert(){
+      alert('cikmak istediyinizden eminsinizmi ?');
+    }
   }
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg sticky-top mb-4" id="nav">
+  <nav class="navbar navbar-expand-lg sticky-top mb-4" id="nav" v-click-outside="hideNavbar">
     <div class="container">
       <nuxt-link class="navbar-brand text-light" to="/">Logo</nuxt-link>
       <button
@@ -26,7 +26,10 @@
               </div>
             </button>
           </li>
-          <li class="nav-item dropdown profile-on-navbar">
+          <li
+            class="nav-item dropdown profile-on-navbar"
+            v-click-outside="hideProfile"
+          >
             <a
               class="nav-link text-light dropdown-toggle"
               href="javascript:0"
@@ -35,20 +38,35 @@
               Profile
             </a>
             <div class="dropdown-menu" v-bind:class="{ show: profileShow }">
-              <nuxt-link class="dropdown-item" to="/profile"
+              <nuxt-link
+                class="dropdown-item"
+                to="/profile"
+                v-on:click.native="toggleProfile"
                 >Profile</nuxt-link
               >
-              <nuxt-link to="/" class="dropdown-item">
+              <nuxt-link
+                to="/"
+                class="dropdown-item"
+                v-on:click.native="toggleProfile"
+              >
                 Notifications <span class="badge badge-light">400</span>
               </nuxt-link>
-              <nuxt-link class="dropdown-item" to="/profile/followlist"
+              <nuxt-link
+                class="dropdown-item"
+                to="/profile/followlist"
+                v-on:click.native="toggleProfile"
                 >Follow list</nuxt-link
               >
-              <nuxt-link class="dropdown-item" to="/profile/setting"
+              <nuxt-link
+                class="dropdown-item"
+                to="/profile/setting"
+                v-on:click.native="toggleProfile"
                 >Setting</nuxt-link
               >
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="javascript:0">Sign out</a>
+              <a class="dropdown-item" href="javascript:0" @click="alert"
+                >Sign out</a
+              >
             </div>
           </li>
           <li class="nav-item active">
@@ -94,6 +112,8 @@
 </template>
 
 <script>
+import vClickOutside from "v-click-outside";
+
 export default {
   data() {
     return {
@@ -105,8 +125,17 @@ export default {
     toggleNavbar() {
       this.navbarShow = !this.navbarShow;
     },
+    hideNavbar() {
+      this.navbarShow = false;
+    },
     toggleProfile() {
       this.profileShow = !this.profileShow;
+    },
+    hideProfile() {
+      this.profileShow = false;
+    },
+    alert() {
+      alert("cikmak istediyinizden eminsinizmi ?");
     }
   }
 };

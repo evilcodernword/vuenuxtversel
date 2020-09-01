@@ -320,7 +320,7 @@
           </div>
           <div class="col-xl-9 col-lg-8">
             <div class="row" id="app">
-              <div class="col-6 col-sm-4 col-md-4 col-xl-3 mb-4">
+              <div class="col-6 col-sm-4 col-md-4 col-xl-3 mb-4" v-for="(n, indx) in 23" :key="indx">
                 <div class="card card-list">
                   <div class="card__cover">
                     <img
@@ -438,8 +438,9 @@ export default {
           {
             breakpoint: 480,
             settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
+              arrows: false,
+              slidesToShow: 2,
+              slidesToScroll: 2
             }
           }
         ]
@@ -487,7 +488,7 @@ export default {
             "https://th.bing.com/th/id/OIP.FAq6HY6_62GWDhj9RGhgwAHaHa?pid=Api&rs=1",
           src: "https://www.youtube.com/embed/ndl1W4ltcmg"
         }
-      ]
+      ],
     };
   },
   methods: {
